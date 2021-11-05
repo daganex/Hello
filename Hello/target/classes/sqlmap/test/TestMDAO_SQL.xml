@@ -3,8 +3,17 @@
 
 <mapper namespace="com.example.hello.test.service.dao.TestMDAO">
 	
-	<select id="getAll" resultType="com.example.hello.test.service.vo.TestVO">
+	<select id="getDepth1" resultType="com.example.hello.test.service.vo.TestVO">
+		SELECT * FROM TEST2
+	</select>
+	
+	<select id="getSport" resultType="com.example.hello.test.service.vo.TestVO">
 		SELECT * FROM TEST
 	</select>
 	
+	<select id="getFood" resultType="com.example.hello.test.service.vo.TestVO">
+		SELECT * FROM TEST3
+	</select>
+	
+	 
 </mapper>
