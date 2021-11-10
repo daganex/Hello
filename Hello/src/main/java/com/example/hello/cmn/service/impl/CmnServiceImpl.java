@@ -4,12 +4,16 @@ import java.io.BufferedReader;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.example.hello.cmn.service.CmnService;
 
 @Service
 public class CmnServiceImpl implements CmnService{
+	
+	private static final Logger logger = LoggerFactory.getLogger(CmnServiceImpl.class);
 
 	@Override
 	public String readJSONStringFromRequestBody(HttpServletRequest request){
@@ -25,7 +29,7 @@ public class CmnServiceImpl implements CmnService{
 	        }
 	        result = json.toString();
 	    }catch(Exception e) {
-	        System.out.println("Error reading JSON string: " + e.toString());
+	    	logger.info("Error reading JSON string: " + e.toString());
 	    }
 	    return result;
 	}

@@ -11,38 +11,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.hello.test.service.TestService;
 
 @Controller
 @RequestMapping("/test")
-public class TestController2 {
+public class TestController3 {
 
-	private static final Logger logger = LoggerFactory.getLogger(TestController2.class);
+	private static final Logger logger = LoggerFactory.getLogger(TestController3.class);
 	
 	@Autowired
 	public TestService testService;
-
-	@ResponseBody
-	@RequestMapping(value = "/p1/getDepth2", method = RequestMethod.POST)
-	public Map<String, Object> hello(HttpServletRequest request) throws Exception {
+	
+	@RequestMapping(value = "/p2", method = RequestMethod.POST)
+	public String hello(HttpServletRequest request) throws Exception {
 
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		
 		try {
-
-			logger.info("getDepth2=============");
-
-			dataMap = testService.getTest2(request);
+			logger.info("start=============");
+			
+			dataMap = testService.getTest3(request);
+			request.setAttribute("dataMap", dataMap);
 			
 		} catch (Exception e) {
 			logger.info("에러 : ", e);
 		}
-		
-		return dataMap;
+		return "hello2";
 	}
 }
-
-
-

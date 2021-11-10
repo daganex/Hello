@@ -7,11 +7,11 @@
 		SELECT * FROM TEST2
 	</select>
 	
-	<select id="getSport" resultType="com.example.hello.test.service.vo.TestVO">
+	<select id="getSport" resultType="com.example.hello.test.service.vo.TestVO2">
 		SELECT * FROM TEST
 	</select>
 	
-	<select id="getFood" resultType="com.example.hello.test.service.vo.TestVO">
+	<select id="getFood" resultType="com.example.hello.test.service.vo.TestVO2">
 		SELECT * FROM TEST3
 	</select>
 	

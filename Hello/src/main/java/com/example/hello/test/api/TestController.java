@@ -1,7 +1,6 @@
 package com.example.hello.test.api;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,8 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.hello.test.service.dao.TestMDAO;
-import com.example.hello.test.service.vo.TestVO;
+import com.example.hello.test.service.TestService;
 
 @Controller
 @RequestMapping("/test")
@@ -23,7 +21,7 @@ public class TestController {
 	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
 	
 	@Autowired
-	public TestMDAO testMDAO;
+	public TestService testService;
 	
 	@RequestMapping(value = "/p1", method = RequestMethod.GET)
 	public String hello(HttpServletRequest request) throws Exception {
@@ -31,13 +29,9 @@ public class TestController {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		
 		try {
-			
 			logger.info("start=============");
 			
-			List<TestVO> testList = testMDAO.getDepth1();
-			
-			dataMap.put("testList", testList);
-			
+			dataMap = testService.getTest1();
 			request.setAttribute("dataMap", dataMap);
 			
 		} catch (Exception e) {
