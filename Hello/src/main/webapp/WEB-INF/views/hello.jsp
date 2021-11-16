@@ -127,6 +127,7 @@ function depth2Div(nextList) {
 	$("#depth2").append(str);	
 }
 
+/** 최종 선택 */
 function choice() {
 	
 	$('#choiceDiv').empty();
@@ -182,21 +183,22 @@ function nextPg() {
 		
 		if( depth2C == null ){
 			alert("2 Depth를 선택해주세요");
-		} else {
-			$("#depth1C").val(depth1C);
-			$("#depth1N").val(depth1N);
-			
-			$("#depth2C").val(depth2C);
-			$("#depth2N").val(depth2N);
+			return;
+		} 
 		
-			// 페이지 이동
-			$("#fm").submit();
-			
-			console.log($("#depth1C").val());
-			console.log($("#depth1N").val());
-			console.log($("#depth2C").val());
-			console.log($("#depth2N").val());
-		}
+		$("#depth1C").val(depth1C);
+		$("#depth1N").val(depth1N);
+		
+		$("#depth2C").val(depth2C);
+		$("#depth2N").val(depth2N);
+	
+		// 페이지 이동
+		$("#fm").submit();
+		
+		console.log($("#depth1C").val());
+		console.log($("#depth1N").val());
+		console.log($("#depth2C").val());
+		console.log($("#depth2N").val());
 	}
 }
 
