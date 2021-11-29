@@ -26,6 +26,10 @@ $(function(){
 	
 });
 
+function back() {
+	history.back();
+}
+
 </script>
 
 <body>
@@ -66,6 +70,11 @@ $(function(){
 <%			
 	}
 %>
+</div>
+
+<div style="margin-top: 3%" align="center">
+	<button onclick="back();"> 돌아가기 </button>
+</div>
 	
 </body>
 </html>

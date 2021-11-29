@@ -214,7 +214,7 @@ function allOfDivOnOff() {
 </script>
 
 <body>
-<form id="fm" action="http://localhost:8082/hello/test/p2" method="post" >
+<form id="fm" action="/hello/test/p2" method="post" >
 	<input type = "hidden" id ="depth1C" name= "depth1C" />
 	<input type = "hidden" id ="depth1N" name= "depth1N" />
 	
