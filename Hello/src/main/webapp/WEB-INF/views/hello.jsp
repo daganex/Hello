@@ -61,7 +61,7 @@ function depth2(value) {
 	
 	$.ajax({
 		type:"POST",
-		url:"/test/getDepth2",
+		url:"/hello/getDepth2",
 		contentType: "application/json",
 		data: JSON.stringify(reqData),
 		dataType : "json",
@@ -211,7 +211,7 @@ function allOfDivOnOff() {
 
 <body>
 
-	<form id="fm" action="/test/result" method="post" >
+	<form id="fm" action="/hello/result" method="post" >
 		<input type = "hidden" id ="depth1C" name= "depth1C" />
 		<input type = "hidden" id ="depth1N" name= "depth1N" />
 		
