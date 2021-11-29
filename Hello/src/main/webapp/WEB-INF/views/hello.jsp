@@ -52,7 +52,6 @@ $(function(){
 /** Get Depth2 ajax */
 function depth2(value) {
 	//this.value 연습
-	
 	// 아무 선택을 안했을때는 리턴
 	if(value == 0 ){
 		return;
