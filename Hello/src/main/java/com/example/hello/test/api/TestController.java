@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.hello.test.service.TestService;
 
 @Controller
-@RequestMapping("/test")
+@RequestMapping("/")
 public class TestController {
 
 	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
@@ -23,7 +23,7 @@ public class TestController {
 	@Autowired
 	public TestService testService;
 	
-	@RequestMapping(value = "/p1", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String hello(HttpServletRequest request) throws Exception {
 
 		Map<String, Object> dataMap = new HashMap<String, Object>();
