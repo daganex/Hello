@@ -23,7 +23,7 @@ public class TestController {
 	@Autowired
 	public TestService testService;
 	
-	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String hello(HttpServletRequest request) throws Exception {
 
 		Map<String, Object> dataMap = new HashMap<String, Object>();
