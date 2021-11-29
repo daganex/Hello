@@ -25,7 +25,7 @@ public class TestController2 {
 	public TestService testService;
 
 	@ResponseBody
-	@RequestMapping(value = "/distribution/getDepth2", method = RequestMethod.POST)
+	@RequestMapping(value = "/getDepth2", method = RequestMethod.POST)
 	public Map<String, Object> hello(HttpServletRequest request) throws Exception {
 
 		Map<String, Object> dataMap = new HashMap<String, Object>();
