@@ -62,7 +62,7 @@ function depth2(value) {
 	
 	$.ajax({
 		type:"POST",
-		url:"/getDepth2",
+		url:"http://192.168.10.200:8082/getDepth2",
 		contentType: "application/json",
 		data: JSON.stringify(reqData),
 		dataType : "json",
