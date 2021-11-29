@@ -42,11 +42,8 @@ $(function(){
 		
 		var selCode = $("#selBox option:selected").attr("selCode");
 		
-		if( selCode == null ){
-			
-			$('#depth2').empty();
-			$('#choiceDiv').empty();
-		}
+		$('#depth2').empty();
+		$('#choiceDiv').empty();
 		
 	});
 	
@@ -250,9 +247,11 @@ function allOfDivOnOff() {
 						}
 					%>
 				</select>
+				
 				<select id=selBox2 onchange="choice();">
 					<option selected> 2 Depth </option>
 				</select>
+				
 			</div>
 			
 			<!-- 1 Depth -->
