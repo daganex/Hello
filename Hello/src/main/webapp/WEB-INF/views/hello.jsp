@@ -214,85 +214,86 @@ function allOfDivOnOff() {
 </script>
 
 <body>
-<form id="fm" action="/hello/test/p2" method="post" >
-	<input type = "hidden" id ="depth1C" name= "depth1C" />
-	<input type = "hidden" id ="depth1N" name= "depth1N" />
-	
-	<input type = "hidden" id = "depth2C" name= "depth2C" />
-	<input type = "hidden" id = "depth2N" name= "depth2N" />
-	
-	
-	<div id="allOfDiv" style="visibility: visible;">
-		<div align="center">
-			<h1>JSP HELLO</h1> 
-		</div>
-		
-		<!-- SELECT BOX -->
-		<div style="margin-top: 5%" align="center">
-			<select id=selBox onchange="depth2(this.value);">
-				<option value="0" selected> 1 Depth </option>
-				<%
-					Map<String, Object> dataMap = (HashMap<String, Object>)request.getAttribute("dataMap");
-				
-					
-					if("0000".equals(dataMap.get("result"))) {
-						
-				 	List<TestVO> testList = (List<TestVO>)dataMap.get("testList");
-				 	
-					for(TestVO vo : testList) {
-						String code = vo.getCode();
-						String name = vo.getName();
-					%>
-						<option selCode="<%=code%>" selName="<%=name%>" value="<%=code%>"><c:out value="<%=name%>"/></option>
-					<%
-						}
-					}
-				%>
-			</select>
-			<select id=selBox2 onchange="choice();">
-				<option selected> 2 Depth </option>
-			</select>
-		</div>
-		
-		<!-- 1 Depth -->
-		<div id="depth1" style="margin-top: 3%" align="center">
-			<table border="1" width="200" height="50">
-				<caption>1 Depth</caption>
-				<thead>
-					<tr align="center">
-						<th>코드</th>
-						<th>이름</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr align="center">
-						<td id="selCode"> - </td>
-						<td id="selName"> - </td>
-					</tr>
-				</tbody>
-			</table>
-			<h1 id="sportsName"></h1>
-		</div>
-		
-		<!-- 2 Depth -->
-		<div id="depth2" style="margin-top: 3%" align="center">
-		</div>
-		
-		<!-- 최종선택 -->
-		<div id="choiceDiv" style="margin-top: 3%" align="center">
-		</div>
-		
-		<!-- 다음 버튼 -->
-		<div style="margin-top: 3%" align="center">
-			<button onclick="nextPg();">다음</button>	
-		</div>
-	</div>
-	
-	<!-- 보이기/감추기 버튼 -->
-	<div style="margin-top: 10%" align="center">
-		<button onclick="allOfDivOnOff();">보이기/감추기</button>
-	</div>
 
-</form>
+	<form id="fm" action="/hello/test/p2" method="post" >
+		<input type = "hidden" id ="depth1C" name= "depth1C" />
+		<input type = "hidden" id ="depth1N" name= "depth1N" />
+		
+		<input type = "hidden" id = "depth2C" name= "depth2C" />
+		<input type = "hidden" id = "depth2N" name= "depth2N" />
+		
+		
+		<div id="allOfDiv" style="visibility: visible;">
+			<div align="center">
+				<h1>JSP HELLO</h1> 
+			</div>
+			
+			<!-- SELECT BOX -->
+			<div style="margin-top: 5%" align="center">
+				<select id=selBox onchange="depth2(this.value);">
+					<option value="0" selected> 1 Depth </option>
+					<%
+						Map<String, Object> dataMap = (HashMap<String, Object>)request.getAttribute("dataMap");
+					
+						
+						if("0000".equals(dataMap.get("result"))) {
+							
+					 	List<TestVO> testList = (List<TestVO>)dataMap.get("testList");
+					 	
+						for(TestVO vo : testList) {
+							String code = vo.getCode();
+							String name = vo.getName();
+						%>
+							<option selCode="<%=code%>" selName="<%=name%>" value="<%=code%>"><c:out value="<%=name%>"/></option>
+						<%
+							}
+						}
+					%>
+				</select>
+				<select id=selBox2 onchange="choice();">
+					<option selected> 2 Depth </option>
+				</select>
+			</div>
+			
+			<!-- 1 Depth -->
+			<div id="depth1" style="margin-top: 3%" align="center">
+				<table border="1" width="200" height="50">
+					<caption>1 Depth</caption>
+					<thead>
+						<tr align="center">
+							<th>코드</th>
+							<th>이름</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr align="center">
+							<td id="selCode"> - </td>
+							<td id="selName"> - </td>
+						</tr>
+					</tbody>
+				</table>
+				<h1 id="sportsName"></h1>
+			</div>
+			
+			<!-- 2 Depth -->
+			<div id="depth2" style="margin-top: 3%" align="center">
+			</div>
+			
+			<!-- 최종선택 -->
+			<div id="choiceDiv" style="margin-top: 3%" align="center">
+			</div>
+			
+			<!-- 다음 버튼 -->
+			<div style="margin-top: 3%" align="center">
+				<button onclick="nextPg();">다음</button>	
+			</div>
+		</div>
+	</form>
+
+<!-- 보이기/감추기 버튼 -->
+<div style="margin-top: 10%" align="center">
+	<button onclick="allOfDivOnOff();">보이기/감추기</button>
+</div>
+	
 </body>
 </html>
