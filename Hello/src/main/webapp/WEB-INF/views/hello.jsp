@@ -240,7 +240,7 @@ function allOfDivOnOff() {
 							String code = vo.getCode();
 							String name = vo.getName();
 						%>
-							<option selCode="<%=code%>" selName="<%=name%>" value="<%=code%>"><c:out value="<%=name%>"/></option>
+							<option selCode="<%=code%>" selName="<%=name%>" value="<%=code%>"><%=name%></option>
 						<%
 							}
 						}
