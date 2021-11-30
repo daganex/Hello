@@ -2,11 +2,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page session="false" %>
 
-<%@ page import="com.example.hello.test.service.vo.TestVO" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="java.util.HashMap" %>
+<!-- 하나하나 import 해도 되고 -->
+<%-- <%@ page import="com.example.hello.test.service.vo.TestVO" %> --%>
+<%-- <%@ page import="java.util.List" %> --%>
+<%-- <%@ page import="java.util.ArrayList" %> --%>
+<%-- <%@ page import="java.util.Map" %> --%>
+<%-- <%@ page import="java.util.HashMap" %> --%>
+
+<!-- 간단하게 상위 전체로 import 가능 -->
+<%@ page import="java.util.*" %>
+<%@ page import="com.example.hello.test.service.vo.*"%>
 
 <html>
 

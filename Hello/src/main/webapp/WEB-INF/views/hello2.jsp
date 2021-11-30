@@ -3,21 +3,27 @@
 	pageEncoding="UTF-8"%>
 <%@ page session="false"%>
 
-<%@ page import="com.example.hello.test.service.vo.TestVO3"%>
-<%@ page import="java.util.List"%>
-<%@ page import="java.util.ArrayList"%>
-<%@ page import="java.util.Map"%>
-<%@ page import="java.util.HashMap"%>
+
+<!-- 하나하나 import 해도 되고 -->
+<%-- <%@ page import="com.example.hello.test.service.vo.TestVO3"%> --%>
+<%-- <%@ page import="java.util.List"%> --%>
+<%-- <%@ page import="java.util.ArrayList"%> --%>
+<%-- <%@ page import="java.util.Map"%> --%>
+<%-- <%@ page import="java.util.HashMap"%> --%>
+
+<!-- 간단하게 상위 전체로 import 가능 -->
+<%@ page import="java.util.*" %>
+<%@ page import="com.example.hello.test.service.vo.*"%>
+
 
 <html>
 
 <head>
-<title>Test2</title>
+	<title>Test2</title>
 </head>
 
 <!-- jQuery -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script type="text/javascript">
 $(function(){
